@@ -325,4 +325,12 @@ echo -e "当前系统信息: ${Font_color_suffix}$opsy ${Green_font_prefix}$virt
 
 copyright
 
-menu
+# 获取当前用户名
+current_user=$(whoami)
+
+# 检查是否是root用户
+if [ "$current_user" = "root" ]; then
+    menu
+else
+    echo "当前用户不是root用户，请切换到root用户后再执行此脚本。"
+fi
