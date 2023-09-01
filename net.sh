@@ -280,7 +280,9 @@ ${Green_font_prefix}1.${Font_color_suffix} 安装BBR原版内核(已经是5.x的
 ${Green_font_prefix}2.${Font_color_suffix} TCP窗口调优
 ${Green_font_prefix}3.${Font_color_suffix} 开启内核转发
 ${Green_font_prefix}4.${Font_color_suffix} 系统资源限制调优
-${Green_font_prefix}5.${Font_color_suffix} 屏蔽ICMP ${Green_font_prefix}6.${Font_color_suffix} 开放ICMP
+${Green_font_prefix}5.${Font_color_suffix} 屏蔽ICMP
+${Green_font_prefix}6.${Font_color_suffix} 开放ICMP
+${Green_font_prefix}7.${Font_color_suffix} 恢复原始配置
 "
 get_system_info
 echo -e "当前系统信息: ${Font_color_suffix}$opsy ${Green_font_prefix}$virtual${Font_color_suffix} $arch ${Green_font_prefix}$kern${Font_color_suffix}
@@ -316,7 +318,7 @@ echo -e "当前系统信息: ${Font_color_suffix}$opsy ${Green_font_prefix}$virt
   clear
     echo -e "${Error}:请输入正确数字 [0-99]"
     sleep 5s
-    start_menu
+    menu
     ;;
   esac
 }
